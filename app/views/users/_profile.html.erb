@@ -1,0 +1,27 @@
+<br>
+<h2><%= @user.name %></h2>
+<h3>Age: <%= @user.age %></h3>
+<h3>Gender: <%= @user.gender %></h3>
+<h3>Race: <%= @user.race %></h3>
+<h3>Orientation: <%= @user.orientation %></h3>
+<h3>Past Relationships: <%= @user.past_relationship_status %></h3>
+
+<br>
+<h3>Location: <%= @user.location %></h3>
+<h3>Profession: <%= @user.profession %></h3>
+<h3>Hobbies: <%= @user.hobbies %></h3>
+<h3>Spirituality: <%= @user.spirituality %></h3>
+
+<br>
+<br>
+<h2> Seeking Match with: </h2>
+<h3> Age: <%= @user.match_age %></h3>
+<h3> Gender: <%= @user.match_gender %></h3>
+<h3> Race: <%= @user.match_race %></h3>
+<h3> Past Relationships: <%= @user.match_past_relationship_status %></h3>
+<h3> Spirituality: <%= @user.match_spirituality %></h3>
+
+<br>
+<%=link_to "Edit My Profile", edit_user_path(@user)%>
+
+

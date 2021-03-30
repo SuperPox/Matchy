@@ -1,0 +1,60 @@
+<h3> Partial </h3>
+<%=form_for(@user) do |f|%>
+    
+    <h3> About Me </h3>
+    <%=f.label("Name: ") %>
+    <%=f.text_field(:name) %><br>
+    
+    <%=f.label("Age: ") %>
+    <%=f.text_field(:age) %><br>
+    
+    
+    <%=f.label("Gender: ") %>
+    <%=f.select :gender, [['select'],['Male'], ['Female']] %><br>
+
+    <%=f.label("Orientation: ") %>
+    <%=f.select :orientation, [['select'],['seeking a woman'], ['seeking a man']] %><br>
+    
+    
+    <%=f.label("Race: ") %>
+    <%=f.select :race, [['select'], ['White'], ['Black'], ['Hispanic'], ['Asian'],  ['African'], ['Arab'], ['Mixed'], ['Other']] %><br>
+
+    <%=f.label("Past Relationship Status: ") %>
+    <%=f.select :past_relationship_status, [['select'], ['never been married'], ['divorced'], ['widower/widow']] %><br>
+
+
+    <br>
+    <%=f.label("Location: ") %>
+    <%=f.text_field(:location) %><br>
+
+    <%=f.label("Profession: ") %>
+    <%=f.text_field(:profession) %><br>
+
+    <%=f.label("Hobbies: ") %>
+    <%=f.text_field(:hobbies) %><br>
+
+    <%=f.label("Spirituality: ") %>
+    <%=f.select :spirituality, [['select'],['Non-Religious'], ['Christian'], ['Muslim'], ['Hindu'], ['Buddhist'], ['Other']] %><br>
+    
+    <h3> Looking for a Match with: </h3>
+    <%=f.label("My Match's Gender: ") %>
+    <%=f.select :match_gender, [['select'],['Male'], ['Female']] %><br>
+
+
+    <%=f.label("My Match's Age: ") %>
+    <%=f.select :match_age, [['select'],['21-25'], ['26-30'], ['31-35'], ['36-40'], ['40-45'], ['46-50'], ['51-60']] %><br>
+
+    <%=f.label("My Match's Race: ") %>
+    <%=f.select :match_race, [['select'], ['White'], ['Black'], ['Hispanic'], ['Asian'], ['African'], ['Arab'], ['Mixed'], ['Other']] %><br>
+
+    
+    <%=f.label("My Match's Past Relationship Status: ") %>
+    <%=f.select :match_past_relationship_status, [['select'], ['never been married'], ['divorced'], ['widower/widow']] %><br>
+
+    <%=f.label("My Match's Spirituality: ") %>
+    <%=f.select :match_spirituality, [['select'],['Non-Religious'], ['Christian'], ['Muslim'], ['Hindu'], ['Buddhist'], ['Other']] %><br>
+   
+    
+    <br>
+    <br> <%=f.submit "Submit"%>
+<%end%>
