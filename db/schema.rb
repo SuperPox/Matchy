@@ -16,6 +16,8 @@ ActiveRecord::Schema.define(version: 2021_03_26_215030) do
     t.string "match_accepted"
     t.string "match_rejected"
     t.string "message"
+    t.integer "you_match_id"
+    t.integer "match_you_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
