@@ -32,8 +32,48 @@
     <%end%>
 
     <br>
+    
+
     <%=link_to "Sign Up With Facebook", '/auth/facebook'%>
 
+    <%=link_to "Sign Up With Facebook", '/auth/facebook', class: 'btn btn-primary btn-sm' %>
+
+
+
+</div>
+
+<br>
+<br>
+<div class="text-center">
+  <form style="max-width:250px;margin:auto;">
+    <h2>Sign Up</h2>
+
+    <% @errors && @errors.each do |e| %>
+      <li><%=e%></li>
+    <%end%>
+  
+    <%= form_for @user, url: signup_path do |f| %>    
+      <div class="field form-group">
+      <%=f.label "Username"%>
+      <%=f.text_field :username, class: 'form-control'%>
+      </div>
+
+
+      <div class="field form-group">
+      <%=f.label "Password"%>
+      <%=f.password_field :password, class: 'form-control' %>
+      </div>
+
+      <div class="field form-group">
+      <%=f.label "Password Confirmation"%>
+      <%=f.password_field :password_confirmation, class: 'form-control' %>
+      </div>
+
+      <br>
+      <%=f.submit "Sign Up"%><br>
+      <br>
+      <%=link_to "Sign Up With Facebook", '/auth/facebook', class: 'btn btn-primary btn-sm' %>
+    <%end%>
 </div>
 
 <br>

@@ -1,9 +1,11 @@
-<h1> My Profile </h1>
+<div class="container">
+    <br>
+    <h1> My Profile</h1>
 
-<% if @user.name == nil %>
-    <%=render partial: 'form'%>
-<%else%>
-    <%=render partial: 'profile'%>
-<%end%>
-
-<br>
+    <% if @user.name == nil %>
+        <%=render partial: 'form'%>
+    <%else%>
+        <%=render partial: 'profile'%>
+    <%end%>
+    <br>
+</div>

@@ -1,30 +1,30 @@
-<%=link_to "Edit My Profile", edit_user_path(@user)%>
+<div class="container">
+    <h2><%= @user.name %></h2>
+    <h5>Age: <%= @user.age %></h5>
+    <h5>Gender: <%= @user.gender %></h5>
+    <h5>Race: <%= @user.race %></h5>
+    <h5>Orientation: <%= @user.orientation %></h5>
+    <h5>Past Relationships: <%= @user.past_relationship_status %></h5>
+    <h5>Location: <%= @user.location %></h5>
+    <h5>Profession: <%= @user.profession %></h5>
+    <h5>Hobbies: <%= @user.hobbies %></h5>
+    <h5>Spirituality: <%= @user.spirituality %></h5>
 
-<br>
-<br>
-<h2><%= @user.name %></h2>
-<h3>Age: <%= @user.age %></h3>
-<h3>Gender: <%= @user.gender %></h3>
-<h3>Race: <%= @user.race %></h3>
-<h3>Orientation: <%= @user.orientation %></h3>
-<h3>Past Relationships: <%= @user.past_relationship_status %></h3>
-<h3>Location: <%= @user.location %></h3>
-<h3>Profession: <%= @user.profession %></h3>
-<h3>Hobbies: <%= @user.hobbies %></h3>
-<h3>Spirituality: <%= @user.spirituality %></h3>
+    <br>
+    <h2> Seeking Match with: </h2>
+    <h5> Age: <%= @user.match_age %></h5>
+    <h5> Gender: <%= @user.match_gender %></h5>
+    <h5> Race: <%= @user.match_race %></h5>
+    <h5> Past Relationships: <%= @user.match_past_relationship_status %></h5>
+    <h5> Spirituality: <%= @user.match_spirituality %></h5>
 
-<br>
-<br>
-<h2> Seeking Match with: </h2>
-<h3> Age: <%= @user.match_age %></h3>
-<h3> Gender: <%= @user.match_gender %></h3>
-<h3> Race: <%= @user.match_race %></h3>
-<h3> Past Relationships: <%= @user.match_past_relationship_status %></h3>
-<h3> Spirituality: <%= @user.match_spirituality %></h3>
-
-<br>
-<br>
-<center><%=link_to "My Matches", user_connections_path(@user)%></center>
+    <br>
+    <%=link_to "Edit My Profile", edit_user_path(@user), class: 'btn btn-dark btn-sm'%>
+    <br>
+    <br>
+    <%=link_to "// Find My Matches! //", user_connections_path(@user), class: 'btn btn-warning btn-lg'%>
+    <br>
+</div>
 
 
 
